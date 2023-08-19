@@ -32,4 +32,4 @@ class Solution:
                 return ''
             i += gcd
 
-        return sub_str
+        return sub_str   
