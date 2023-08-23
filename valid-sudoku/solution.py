@@ -1,7 +1,7 @@
 import numpy as np
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
-        # check if number is not repeated in row
+        # check if number is not repeated in row 
         for row in board:
             for r in row:
                 if r != ".":
