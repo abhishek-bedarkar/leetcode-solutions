@@ -6,3 +6,4 @@ class Solution:
             return 0
         else:
             return haystack.find(needle)
+        
