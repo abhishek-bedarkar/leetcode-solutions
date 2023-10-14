@@ -30,5 +30,4 @@ class Solution:
         while last +1  < n and nums[last+1] ==  target :
             last += 1
         
-
         return [first, last]
