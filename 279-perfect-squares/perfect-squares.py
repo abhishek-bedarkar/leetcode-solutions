@@ -7,10 +7,7 @@ class Solution:
         return self.ps(n, t)
 
     def ps(self, n:int, t:int)-> int:
-        # Base condition
-        if t==1:
-            self.memo[n][t] = n
-            return n   
+        # Base condition   
         if n ==0 or n==1 or t==1:
             self.memo[n][t] = n
             return n
@@ -23,4 +20,3 @@ class Solution:
                 return self.memo[n][t]
         else:
             return self.memo[n][t]
-        
