@@ -21,13 +21,27 @@ class Solution:
         # return self.max_d-2
 
         # 2. height optimization 
-        if root == None:
-            return 0
-        else:
-            op1 = self.diameterOfBinaryTree(root.right)
-            op2 = self.diameterOfBinaryTree(root.left)
-            op3 = self.height(root.left) + self.height(root.right)
-            return max(op1, op2, op3)
+        # if root == None:
+        #     return 0
+        # else:
+        #     op1 = self.diameterOfBinaryTree(root.right)
+        #     op2 = self.diameterOfBinaryTree(root.left)
+        #     op3 = self.height(root.left) + self.height(root.right)
+        #     return max(op1, op2, op3)
+
+        # O(n) optimization 
+        def diameter(node):
+            if not node:
+                return 0
+            
+            left = diameter(node.left)
+            right = diameter(node.right)
+
+            self.max_d = max(self.max_d, left + right)
+            return max(left, right) + 1
+        
+        diameter(root)
+        return self.max_d
 
     def solve(self, root):
 
