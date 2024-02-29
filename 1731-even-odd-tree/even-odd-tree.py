@@ -19,7 +19,6 @@ class Solution:
 
         queue = deque()
         ht = self.height(root)
-        print("ht ->", ht)
         result_list = [ [] for i in range(ht)]
         lvl = 0
         if root:
@@ -40,17 +39,15 @@ class Solution:
         else:
             return False
 
-        print(result_list)
+ 
         for i,lst in enumerate(result_list):
             if i%2 ==0:
                 for j in range(0, len(lst)-1):
                     if  lst[j]>=lst[j+1]:
-                        print(lst[j], '-> ',lst[j+1])
                         return False
             else:
                 for j in range(0, len(lst)-1):
                     if lst[j] <= lst[j+1]:
-                        print(lst[j], '-> ',lst[j+1])
                         return False
         return True
 
