@@ -24,5 +24,5 @@ class Solution:
             if i<max_index:
                 max_index-=1
             else:
-                break
+                return max_index
         return max_index
