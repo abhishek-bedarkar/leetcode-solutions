@@ -9,8 +9,6 @@ class Solution:
             h_index[idx:] += 1
 
         h_index = h_index[::-1]
-        print(citations)
-        print(h_index)
         result = 0
         for i in range(len(citations)):
             min_citation = min(citations[i], h_index[i])
