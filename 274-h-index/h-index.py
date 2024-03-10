@@ -23,4 +23,6 @@ class Solution:
         for i in citations:
             if i<max_index:
                 max_index-=1
+            else:
+                break
         return max_index
