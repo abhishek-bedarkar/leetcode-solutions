@@ -21,10 +21,10 @@ class Solution:
         while list2_end.next:
             list2_end = list2_end.next
         
-        print(end.val)
+        #print(end.val)
         start.next = list2
 
-        print(list2_end.val)
+        #print(list2_end.val)
         list2_end.next = end.next
 
         return list1
