@@ -1,7 +1,9 @@
 class Solution:
     def findDuplicate(self, nums: List[int]) -> int:
-        nums.sort()
-        for i in range(len(nums)-1):
-            if nums[i+1] == nums[i]:
-                return nums[i]
-        
+        id = dict()
+
+        for num in nums:
+            if num not in id.keys():
+                id[num] = 1
+            else:
+                return num
