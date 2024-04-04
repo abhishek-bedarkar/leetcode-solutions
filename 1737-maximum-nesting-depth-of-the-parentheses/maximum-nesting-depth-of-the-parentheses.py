@@ -4,11 +4,12 @@ class Solution:
         for ch in s:
             if ch == '(':
                 result += 1
+
+                if result > max_result:
+                    max_result = result
+
             if ch == ')':
                 result -= 1
-            
-            if result > max_result:
-                max_result = result
 
         return max_result
             
