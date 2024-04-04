@@ -7,7 +7,8 @@ class Solution:
             if ch == ')':
                 result -= 1
             
-            max_result = max(max_result, result)
+            if result > max_result:
+                max_result = result
 
         return max_result
             
