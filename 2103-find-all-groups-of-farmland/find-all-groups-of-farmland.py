@@ -48,13 +48,10 @@ class Solution:
                     i,j,val = r,c, land[r][c]
 
                     # diagonal area
-                    # if 0<= i+1 < row and 0 <= j+1 < col and land[i+1][j+1] == val:
-                    #     while 0<= i+1 < row and 0 <= j+1 < col and land[i+1][j+1] == val:
-                    #         i += 1
-                    #         j += 1
-                    #     # right area
-                    #     while 0<= i < row and 0 <= j+1 < col and land[i][j+1] == val:
-                    #         j += 1
+                    if 0<= i+1 < row and 0 <= j+1 < col and land[i+1][j+1] == val:
+                        while 0<= i+1 < row and 0 <= j+1 < col and land[i+1][j+1] == val:
+                            i += 1
+                            j += 1
 
                     # right area
                     if  0<= i < row and 0 <= j+1 < col and land[i][j+1] == val:
