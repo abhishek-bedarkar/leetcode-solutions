@@ -1,7 +1,7 @@
 class Solution:
     def openLock(self, deadends: List[str], target: str) -> int:
 
-        if "0000" in deadends: return -1 
+        if "0000" in deadends or target in deadends: return -1 
         if target == "0000": return 0
 
         steps, visited_state, combinations = 0, set(["0000"]), set(["0000"])
