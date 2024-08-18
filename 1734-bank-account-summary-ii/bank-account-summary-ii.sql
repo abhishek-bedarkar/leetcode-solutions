@@ -5,4 +5,4 @@ from Transactions t
 left join Users c
 on t.account = c.account
 group by t.account
-having balance > 10000
+having balance> 10000
