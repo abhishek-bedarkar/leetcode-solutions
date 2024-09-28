@@ -1,5 +1,5 @@
-class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
+class Solution(object):
+    def twoSum(self, nums, target):
         hashmap = {}
         for i in range(len(nums)):
             complement = target - nums[i]
@@ -7,3 +7,4 @@ class Solution:
                 return [i, hashmap[complement]]
             hashmap[nums[i]] = i
         return []
+        
