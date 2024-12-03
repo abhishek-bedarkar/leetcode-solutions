@@ -1,9 +1,16 @@
-class Solution:
-    def findDuplicate(self, nums: List[int]) -> int:
-        id = set()
+class Solution(object):
+    def findDuplicate(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+
+        hashmap = dict()
 
         for num in nums:
-            if num not in id:
-                id.add(num)
-            else:
+            if num in hashmap:
                 return num
+            else:
+                hashmap[num] = 1
+            
+        
